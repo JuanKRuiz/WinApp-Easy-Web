@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-44234711-1', 'azurewebsites.net');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li class="active">
+                    <a href="windows-store.html">Windows Store</a>
+                </li>
+                <li><a href="windows-phone-store.html">Windows Phone</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container" ng-app="apps-module">
+        <div class="hero-unit">
+            <h1>Cambiar la region en Windows</h1>
+            <p>Como ver las apps disponibles para otros paises</p>
+        </div>
+
+        <p>En el panel de búsqueda ingresar intl.cpl</p>
+        <p></p>
+        <img class="img-polaroid" src="img/image001.jpg" />
+        <p></p>
+        <p>Ejecutarlo, en la ventana que se abre ir a la pestaña Ubicación (location si lo tienen en inglés)</p>
+        <p></p>
+        <img class="img-polaroid" src="img/image002.jpg" />
+        <p></p>
+        <p>Seguidamente seleccionar el pais de las Apps (en este caso Colombia)</p>
+        <p></p>
+        <img class="img-polaroid" src="img/image003.jpg" />
+        <p></p>
+        <p>Aceptar los cambios, reiniciar la sesión (en Windows 8.1 no hay que reiniciar sesión)</p>
+    </section>
+</body>
+</html>

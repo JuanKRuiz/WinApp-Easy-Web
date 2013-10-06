@@ -1,0 +1,19 @@
+﻿
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+h4 {
+    overflow: hidden;
+    height: 20px;
+}
+
+.thumbnail img {
+    background-color: #000;
+}
+
+.thumbnail > p {
+    overflow: hidden;
+    height: 18px;
+}

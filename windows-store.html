@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html ng-app="apps-module">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="controllers/generic-controller.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <script>
+        var targetfile = 'win.json';
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-44234711-1', 'azurewebsites.net');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li class="active">
+                    <a href="windows-store.html">Windows Store</a>
+                </li>
+                <li><a href="windows-phone-store.html">Windows Phone</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container">
+        <div class="hero-unit">
+            <h1>Windows Store App Gallery</h1>
+            <p>Aplicaciones de Windows 8 para descargar</p>
+            <p>Sino ves algunas apps revisa: <a href="regional.html">"Cambiar la region en Windows"</a> para que te aparezcan en el store.</p>
+        </div>
+        <ul class="thumbnails" ng-controller="GenericController">
+            <li class="span3" ng-repeat="app in apps">
+                <div class="thumbnail">
+                    <img src="{{app.thumbnail}}">
+                    <h4>{{app.appname}}</h4>
+                    <p>{{app.author}}</p>
+                    <a href="ms-windows-store:PDP?PFN={{app.pfn}}">
+                        <div class="btn btn-primary">Instalar</div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+
+    </section>
+    <script>
+        angular.module('apps-module', [], function ($compileProvider) {
+            $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ms-windows-store):/);
+        });
+    </script>
+</body>
+</html>
